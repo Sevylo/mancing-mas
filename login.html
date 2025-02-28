@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login | Mancing Mas</title>
+    <link rel="icon" href="icon.png">
+
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #f4f4f4;
+            margin: 0;
+            position: relative;
+            background: url('background.jpg') no-repeat center center fixed;
+            background-size: cover;
+        }
+
+        body::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.7);
+            z-index: -1;
+        }
+
+        .navbar {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            background: #1b499f;
+            padding: 5px;
+            width: 100%;
+            position: fixed;
+            top: 0;
+            left: 0;
+            z-index: 1000;
+        }
+
+        .navbar .logo {
+            color: white;
+            font-size: 24px;
+            font-weight: bold;
+            text-decoration: none;
+        }
+
+        .navbar .menu {
+            display: flex;
+            list-style: none;
+        }
+
+        .navbar .menu li {
+            margin: 0 15px;
+        }
+
+        .navbar .menu li a {
+            text-decoration: none;
+            color: white;
+            font-size: 16px;
+            transition: color 0.3s;
+        }
+
+        .navbar .menu li a:hover {
+            color: #d4edda;
+        }
+
+        form {
+            max-width: 600px;
+            width: 90%;
+            margin: 50px auto;
+            background: white;
+            padding: 20px 25px;
+            border-radius: 10px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+        }
+
+        h2 {
+            text-align: center;
+            margin-top: 5px;
+            color: #1b499f;
+        }
+
+        .form-group {
+            display: grid;
+            grid-template-columns: 1fr 2fr;
+            gap: 10px;
+            margin-bottom: 10px;
+            padding-right: 10px;
+        }
+
+        label {
+            font-weight: bold;
+            text-align: left;
+            color: #1b499f;
+        }
+
+
+        .separator {
+            text-align: center;
+        }
+
+        input,
+        select {
+            font-weight: bold;
+            width: 100%;
+            padding: 5px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        input[type="submit"] {
+            width: 100%;
+            background: #1b499f;
+            color: white;
+            border: none;
+            padding: 10px;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 16px;
+            border: 2px solid #1b499f;
+        }
+
+        input[type="submit"]:hover {
+            background: #ffffff;
+            border: 2px solid #1b499f;
+            color: #1b499f;
+        }
+
+        .lupa{
+            text-align: end;
+        }
+
+        a {
+            text-decoration: none;
+            color: #1b499f;
+            font-weight: bold;
+        }
+
+        a:hover {
+            color: #ff5733;
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <nav class="navbar">
+
+        <a href="index.html" class="logo">🐟 Mancing Mas</a>
+        <ul class="menu">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="galeri.html">Galeri</a></li>
+            <li><a href="event.html">Event</a></li>
+            <li><a href="sewa.html">Sewa</a></li>
+            <li><a href="tips.html">Tips</a></li>
+            <li><a href="daftar.html">Daftar</a></li>
+            <li><a href="login.html">Login</a></li>
+        </ul>
+    </nav>
+
+    <form>
+        <h2>Masuk Akun
+            <hr>
+        </h2>
+        <div class="form-group">
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+        </div>
+
+        <div class="form-group">
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="password" required>
+        </div>
+
+        <div class="form-group">
+            <label for="konfirmasi_password">Konfirmasi Password:</label>
+            <input type="password" id="konfirmasi_password" name="konfirmasi_password" required>
+        </div>
+
+        <div class="lupa">
+            <a href="daftar.html">Belum Punya Akun? Daftar Disini...</a>
+        </div><hr>
+        <input type="submit" value="Daftar"></input>
+    </form>
+
+</body>
+
+</html>
