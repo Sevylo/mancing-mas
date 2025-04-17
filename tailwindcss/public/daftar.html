@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register | Delta Fishing</title>
+    <link rel="icon" href="icon.png">
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <style>
+        body {
+            background: linear-gradient(to bottom, #0077b6, #0096c7, #00b4d8, #48cae4, #90e0ef);
+            min-height: 100vh;
+        }
+    </style>
+
+</head>
+
+<body>
+    <header
+        class="bg-blue-600 text-white font-bold py-4 px-6 shadow-lg w-full fixed top-0 left-0 flex items-center justify-between">
+
+        <a href="index.html" class="text-2xl font-bold flex items-center">🐟 Delta Fishing</a>
+        <ul class="flex space-x-9 text-2xl">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="galeri.html">Galeri</a></li>
+            <li><a href="event.html">Event</a></li>
+            <li><a href="sewa.html">Sewa</a></li>
+            <li><a href="tips.html">Tips</a></li>
+            <li><a href="daftar.html">Daftar</a></li>
+            <li><a href="login.html">Login</a></li>
+        </ul>
+    </header>
+
+    <body
+        class="min-h-screen flex items-center justify-center bg-gradient-to-b from-blue-600 via-blue-400 to-blue-200 p-4">
+
+        <form onsubmit="return validasiNama()" method="POST" action="prosesDaftar.php"
+            class="bg-white rounded-xl shadow-xl p-8 w-full max-w-xl mt-24">
+
+            <h2 class="text-2xl font-bold text-center text-blue-600 mb-3">
+                Formulir Pendaftaran
+            </h2>
+
+            <div class="mb-4">
+                <label for="nama" class="block font-medium mb-1 text-blue-700">Nama Lengkap:</label>
+                <input type="text" id="nama" name="nama" required
+                    class="w-full px-4 py-2 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-blue-500">
+            </div>
+
+            <div class="mb-4">
+                <label for="jenis_kelamin" class="block font-medium mb-1 text-blue-700">Jenis Kelamin:</label>
+                <select id="jenis_kelamin" name="jenis_kelamin" required
+                    class="w-full px-4 py-2 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-blue-500">
+                    <option value="Laki-laki">Laki-laki</option>
+                    <option value="Perempuan">Perempuan</option>
+                </select>
+            </div>
+
+            <div class="mb-4">
+                <label for="tanggal_lahir" class="block text-blue-700 font-medium mb-1 ">Tanggal Lahir:</label>
+                <input type="date" id="tanggal_lahir" name="tanggal_lahir" required
+                    class="w-full px-4 py-2 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-blue-500">
+            </div>
+
+            <div class="mb-4">
+                <label for="alamat" class="block font-medium mb-1 text-blue-700">Alamat Lengkap:</label>
+                <input type="text" id="alamat" name="alamat" required
+                    class="w-full px-4 py-2 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-blue-500">
+            </div>
+
+            <div class="mb-4">
+                <label for="hp" class="block font-medium mb-1 text-blue-700">Nomor HP / WhatsApp:</label>
+                <input type="tel" id="hp" name="hp" required
+                    class="w-full px-4 py-2 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-blue-500">
+            </div>
+
+            <div class="mb-4">
+                <label for="email" class="block font-medium mb-1 text-blue-700">Email:</label>
+                <input type="email" id="email" name="email" required
+                    class="w-full px-4 py-2 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-blue-500">
+            </div>
+
+            <div class="mb-4">
+                <label for="username" class="block font-medium mb-1 text-blue-700">Username:</label>
+                <input type="text" id="username" name="username" required
+                    class="w-full px-4 py-2 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-blue-500">
+            </div>
+
+            <div class="mb-4">
+                <label for="password" class="block font-medium mb-1 text-blue-700">Password:</label>
+                <input type="password" id="password" name="password" required
+                    class="w-full px-4 py-2 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-blue-500">
+            </div>
+
+            <div class="flex items-center mb-4">
+                <input type="checkbox" id="showPassword" onclick="togglePassword()" class="mr-2">
+                <label for="showPassword" class="text-sm text-gray-700">Show Password / Hide Password</label>
+            </div>
+
+            <script>
+                function togglePassword() {
+                    const passField = document.getElementById("password");
+                    passField.type = passField.type === "password" ? "text" : "password";
+                }
+            </script>
+
+            <div class="mb-4">
+                <label for="konfirmasi_password" class="block font-medium mb-1 text-blue-700">Konfirmasi Password:</label>
+                <input type="password" id="konfirmasi_password" name="konfirmasi_password" required
+                    class="w-full px-4 py-2 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-blue-500">
+            </div>
+
+            <div class="mb-6">
+                <label for="hobi" class="block font-medium mb-1 text-blue-700">Hobi Memancing:</label>
+                <select id="hobi" name="hobi" required
+                    class="w-full px-4 py-2 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-blue-500">
+                    <option value="Ya">Ya</option>
+                    <option value="Tidak">Tidak</option>
+                </select>
+            </div>
+
+            <button type="submit" name="submit"
+                class="w-full bg-blue-600 text-white font-semibold py-2 rounded hover:bg-blue-700 transition">
+                Daftar
+            </button>
+        </form>
+
+        <script>
+            function validasiNama() {
+                let inputNama = document.getElementById("nama").value;
+                let pola = /^[a-zA-Z' ]+$/;
+                if (!pola.test(inputNama)) {
+                    alert("Nama hanya boleh berisi huruf dan tanda petik satu ('')!");
+                    return false;
+                }
+                return true;
+            }
+        </script>
+
+    </body>
+
+</html>
