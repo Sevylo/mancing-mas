@@ -95,6 +95,10 @@ $result = mysqli_query($koneksi, $query);
         </div>
     </div>
 
+    <a href="tbtransaksi.php"
+    class="mt-4 flex justify-center mx-24 font-semibold bg-blue-600 text-white text-center px-4 py-2 rounded hover:bg-blue-700">
+    Pindah Ke Tabel Transaksi
+  </a>
 
 </body>
 

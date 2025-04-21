@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Delta Fishing - Tambah Ikan</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css">
+    <style>
+        body {
+            background: linear-gradient(to bottom, #0077b6, #00b4d8, #90e0ef);
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-family: 'Arial', sans-serif;
+        }
+        .container {
+            background: rgba(255, 255, 255, 0.15);
+            border-radius: 20px;
+            padding: 20px;
+            backdrop-filter: blur(10px);
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+            border: 1px solid rgba(255, 255, 255, 0.3);
+        }
+        .form-input {
+            background: rgba(255, 255, 255, 0.3);
+            border: none;
+            color: #000000;
+        }
+        .form-input::placeholder {
+            color: rgba(0, 0, 0, 0.7);
+        }
+    </style>    
+</head>
+<body>
+
+    <header
+    class="bg-blue-600 text-white font-bold py-4 px-6 shadow-lg w-full fixed top-0 left-0 flex items-center justify-between">
+
+    <a href="index.html" class="text-2xl font-bold flex items-center">🐟 Delta Fishing</a>
+    <ul class="flex space-x-9 text-2xl">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html">About Us</a></li>
+      <li><a href="galeri.html">Galeri</a></li>
+      <li><a href="jenisikan.html">Ikan</a></li>
+      <li><a href="event.html">Event</a></li>
+      <li><a href="sewa.html">Sewa</a></li>
+      <li><a href="tips.html">Tips</a></li>
+      <li><a href="daftar.html">Daftar</a></li>
+      <li><a href="login.html">Login</a></li>
+    </ul>
+  </header>
+
+    <!-- Container Form -->
+    <div class=" my-12 relative container p-8 w-full max-w-lg">
+        <!-- Header -->
+        <h2 class="text-3xl font-semibold text-white text-center mb-6 flex items-center justify-center gap-2">
+            Tambah Data Ikan
+        </h2>
+
+        <!-- Form Tambah Ikan -->
+        <form action="createIkan.php" method="post" class="space-y-5">
+            <div>
+                <label class="block text-black font-medium">Nama Ikan</label>
+                <input type="text" name="nama" placeholder="Masukkan Nama Ikan" required 
+                    class="form-input p-3 w-full rounded-xl focus:ring-2 focus:ring-white outline-none">
+            </div>
+
+            <div>
+                <label class="block text-black font-medium">Jenis Ikan</label>
+                <select name="jenis" required 
+                    class="form-input p-3 w-full rounded-xl focus:ring-2 focus:ring-white outline-none">
+                    <option value="">Pilih Jenis Ikan</option>
+                    <option value="Air Tawar">Air Tawar</option>
+                    <option value="Air Payau">Air Payau</option>
+                    <option value="Air Laut">Air Laut</option>
+                </select>
+            </div>
+
+            <div>
+                <label class="block text-black font-medium">Berat Ikan (gram)</label>
+                <select name="berat" required 
+                    class="form-input p-3 w-full rounded-xl focus:ring-2 focus:ring-white outline-none">
+                    <option value="">Pilih Berat Ikan</option>
+                    <option value="100">100 gram</option>
+                    <option value="200">200 gram</option>
+                    <option value="300">300 gram</option>
+                    <option value="400">400 gram</option>
+                    <option value="500">500 gram</option>
+                </select>
+            </div>
+
+            <!-- Tombol Submit -->
+            <button type="submit" 
+                class="bg-white text-blue-600 p-3 w-full rounded-xl font-semibold hover:bg-blue-100 transition duration-300 shadow-md transform hover:scale-105">
+                ➕ Tambah Ikan
+            </button>
+        </form>
+
+        <!-- Link ke Lihat Data -->
+        <div class="text-center mt-6">
+            <a href="readIkan.php" class="text-white text-lg font-medium hover:underline">📊 Lihat Data Ikan</a>
+        </div>
+    </div>
+</body>
+</html>
